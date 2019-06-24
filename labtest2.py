@@ -1,3 +1,4 @@
+# Working with lists
 first_list = ["eggs", "bacon", "milk", "butter", "bread", "cheddar", 5, 2.75]
 # identify - 
 print(first_list)
