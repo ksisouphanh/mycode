@@ -9,7 +9,7 @@
   tasks:
   - name: Print out to the screen
     debug:
-    msg: "The vendor IP is: {{ vendorip }}"
+      msg: "The vendor IP is: {{ vendorip }}"
     # note that recall within the msg parameter requires mustache-brackets
     
   - name: Print just a variable
