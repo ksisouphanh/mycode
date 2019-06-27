@@ -1,0 +1,24 @@
+---
+- name: Handling Errors
+  hosts: all
+
+  tasks:
+  - name: Walking through erros
+    debug: 
+      msg: "We are working through errors"
+
+  - block: 
+    - name: print something
+      debug:
+        msg: "let's print this out!"
+
+    - name: Fail Me!
+      shell: "/bin/false"
+
+    - name: Print Dir Content
+      shell: "ls"
+
+    rescue:
+    - name:
+      debug:
+        msg: "hellllllppppp"

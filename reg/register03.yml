@@ -1,0 +1,9 @@
+---
+- name: Play - Another Register Example
+  hosts: planet-express
+  gather_facts: true
+
+  tasks:
+  - name: Reachout with geturl to random generation
+    get_url:
+
