@@ -11,7 +11,7 @@
   tasks:
 
   - name: Perform a ls command
-    command: "ls {{ directory }}"
+    command: "ls {{ ansible_user_dir }}"
     register: lsdirout
 
   - name: Display the result
