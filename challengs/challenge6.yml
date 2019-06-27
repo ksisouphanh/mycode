@@ -1,0 +1,20 @@
+---
+- name: challenge6
+  hosts: planet-express
+         
+  vars_prompt:
+
+  - name: "directory"
+    prompt: Enter a Directory to search
+    private: no
+
+  tasks:
+
+  - name: Perform a ls command
+    command: "ls {{ directory }}"
+    register: lsdirout
+
+  - name: Display the result
+    debug: 
+      msg: "Hers's your crap:  {{lsdirout}}"
+     
