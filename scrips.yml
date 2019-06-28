@@ -1,0 +1,14 @@
+---
+- name: fixin fer scripts
+  hosts: planet-express
+
+  tasks:
+  - name: Using the scrip module
+    script: /home/student/texasroxx.py
+      args:
+        executable: python3
+    register: desults
+
+  - name: print out results
+    debug:
+      var: results

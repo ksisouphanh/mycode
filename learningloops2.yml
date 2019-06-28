@@ -1,0 +1,14 @@
+---
+- name: Larnin Loops
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: Debug through a loop
+    debug:
+      msg: "We want this to print out next {{ item.server }} has IP: {{ item.ip}} "
+             #    with_items
+    loop:
+    - {"server": "old1", "ip": "1.2.3.4"}
+    - {"server": "old2"}
+    - {"server": "non-Solaris"}
